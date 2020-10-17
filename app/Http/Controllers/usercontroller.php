@@ -168,7 +168,7 @@ $r->validate(
           $r->session()->put('data', $data);
           $users= DB::select('select * from owner');
 
-        //DB::update('update owner set active=1 where email = ?',[$email]);
+        DB::update('update owner set active=1 where email = ?',[$email]);
 
              $data=$r->session()->get('data');
            
